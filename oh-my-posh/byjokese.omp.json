@@ -1,0 +1,148 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#FFBD00",
+          "properties": {
+            "template": "{{ .UserName }}'s "
+          },
+          "style": "plain",
+          "type": "session"
+        },
+        {
+          "foreground": "#00C6F7",
+          "properties": {
+            "style": "folder",
+            "template": "{{ .Path }}/ "
+          },
+          "style": "plain",
+          "type": "path"
+        },
+        {
+          "foreground": "#F62F2E",
+          "properties": {
+            "fetch_status": true,
+            "template": "<#ffffff>on</> {{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} "
+          },
+          "style": "plain",
+          "type": "git"
+        },
+        {
+          "foreground": "#98C379",
+          "properties": {
+            "fetch_version": true,
+            "template": "<#ffffff>via</> \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
+          },
+          "style": "plain",
+          "type": "node"
+        },
+        {
+          "type": "angular",
+          "style": "powerline",
+          "foreground": "#e74856",
+          "properties": {
+            "template": "\uE753 {{ .Full }} "
+          }
+        },
+        {
+          "style": "powerline",
+          "foreground": "#0ca1ce",
+          "properties": {
+            "template": "<#ffffff>via</> \ue77f {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} "
+          },
+          "type": "dotnet"
+        },
+        {
+          "style": "powerline",
+          "foreground": "#906cff",
+          "properties": {
+            "template": "<#ffffff>via</> \uE235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} "
+          },
+          "type": "python"
+        },
+        {
+          "style": "powerline",
+          "foreground": "#e69731",
+          "properties": {
+            "template": "<#ffffff>via</> \uE738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+          },
+          "type": "java"
+        },
+        {
+          "style": "powerline",
+          "foreground": "#84d2ff",
+          "properties": {
+            "template": "<#ffffff>via</> \uFCD1 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+          },
+          "type": "go"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "style": "plain",
+          "foreground": "#c7c7c7",
+          "properties": {
+            "time_format": "Jan 2 15:04"
+          },
+          "type": "time"
+        },
+        {
+          "foreground": "#85C980",
+          "leading_diamond": "\u250b",
+          "properties": {
+            "template": " RAM:{{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB"
+          },
+          "style": "diamond",
+          "trailing_diamond": " ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#ffffff",
+          "leading_diamond": "\u250b",
+          "properties": {
+            "style": "roundrock",
+            "template": " {{ .FormattedMs }} ",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "type": "executiontime"
+        },
+        {
+          "type": "exit",
+          "style": "diamond",
+          "foreground": "#e74856",
+          "leading_diamond": "\u250b",
+          "properties": {
+            "always_enabled": false,
+            "template": " {{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }}"
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#FFBD00",
+          "properties": {
+            "template": "\u2b9e "
+          },
+          "style": "plain",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 1
+}
