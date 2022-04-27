@@ -1,11 +1,13 @@
 [core]
-	#editor = #replace_editor
+	editor = "code --waitgit rebase"
 	longpaths = true
 	untrackedCache = true
+	autocrlf = true
+	fsmonitor = true
 [user]
-	email = #replace_email
-	name = #replace_name
-	signingkey = #replace_key
+	email = #replace email
+	name = Ivan Exposito
+	signingkey = #replace key
 [tag]
 	forceSignAnnotated = true
 [commit]
@@ -13,7 +15,7 @@
 [init]
 	defaultBranch = main
 [gpg]
-	program = #replace_gpg.exe_path
+	program = #replace
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -36,7 +38,7 @@
 [color "status"]
 	added = yellow
 	changed = green
-	untracked = cya
+	untracked = cyan
 [alias]
 #List Aliases
 aliases = config --get-regexp alias
