@@ -15,7 +15,7 @@ sudo apt-get install -y \
   vim nano libbrotli-dev cmake \
   jq less catimg zoxide \
   tldr curl httpie man googler neofetch \
-  htop gtop ncdu icdiff \
+  htop ncdu icdiff \
   unzip zip bzip2 p7zip-full \
   locales locales-all \
   bat exa \
