@@ -10,7 +10,7 @@ zgen load zsh-users/zsh-syntax-highlighting
 zgen load zsh-users/zsh-autosuggestions
 zgen load zsh-users/zsh-completions
 
-source ~/.dotfiles/.aliases
+source ~/.dotfiles/linux/.aliases
 
 export PAGER="less"
 
