@@ -35,4 +35,5 @@ rm ~/.zcompdump*; compinit
 # PATH
 export PATH=$HOME/bin:/usr/games:/usr/local/bin:$HOME/.nvm:/usr/local/go/bin:$DENO_INSTALL/bin:$HOME/.cargo/bin:$GOPATH/bin:$PNPM_HOME:$PATH
 
-echo "$(cat $HOME/.dotfiles/banner)" | lolcat
+# Banner
+bash $HOME/dotfiles/linux/banner.sh
