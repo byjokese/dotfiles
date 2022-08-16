@@ -30,6 +30,17 @@ Script to prepare your GNU/Linux terminal (WSL also) in a «superterminal» with
 | icdiff (diff) |
 | hyperfine (time) |
 
+## Requisites
+
+If you haven't a non-root user with sudo privileges, create it before run this script:
+
+```bash
+adduser byjokese --quiet
+usermod -aG sudo byjokese
+apt-get update -y && apt-get install -y sudo git
+su byjokese
+```
+
 ## Installation
 
 ```bash
@@ -40,15 +51,10 @@ bash install.sh
 
 * Note: Do not run as root/sudo this file!
 
-## Requisites
-
-If you haven't a non-root user with sudo privileges, create it before run this script:
+If running the system for first time run `pre-install.sh` script before `install.sh`
 
 ```bash
-adduser byjokese --quiet
-usermod -aG sudo byjokese
-apt-get update -y && apt-get install -y sudo git
-su byjokese
+bash pre-install.sh
 ```
 
 Linux section, inspired from https://github.com/ManzDev/dotfiles
