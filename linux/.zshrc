@@ -1,7 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
-plugins=(git nvm npm github docker colored-man-pages)
+plugins=(git nvm npm python github docker colored-man-pages)
 
 # Reload theme
 source $ZSH/oh-my-zsh.sh
@@ -13,6 +12,9 @@ zgen load zsh-users/zsh-autosuggestions
 zgen load zsh-users/zsh-completions
 
 source ~/.dotfiles/linux/.aliases
+
+#Theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export PAGER="less"
 
@@ -30,6 +32,9 @@ export NVM_DIR=$HOME/.nvm
 # zoxide
 eval "$(zoxide init zsh)"
 rm ~/.zcompdump*; compinit
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
 
 # PATH
 export PATH=$HOME/bin:/usr/games:/usr/local/bin:$HOME/.nvm:/usr/local/go/bin:$DENO_INSTALL/bin:$HOME/.cargo/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH
