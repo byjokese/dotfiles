@@ -30,9 +30,12 @@ sudo ln -s /usr/bin/batcat /usr/local/bin/bat
 tldr -u
 
 # Oh-my-zsh
-echo "Installing oh-my-zsh..."
+echo "Installing oh-my-zsh & powerlevel10k theme..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo source $HOME/.dotfiles/linux/.zshrc >> ~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo source $HOME/.dotfiles/linux/.p10k.zsh >> ~/.p10k.zsh
+
 
 PATH=$HOME/bin:/usr/local/bin:$HOME/.nvm:/usr/local/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin:/usr/share/go/bin:$PNPM_HOME:$PATH
 
