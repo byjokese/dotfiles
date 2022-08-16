@@ -29,7 +29,7 @@ else
 	gpu="Not Found"
 fi
 
-echo "$(cat $HOME/dotfiles/linux/banner)" | lolcat
+echo "$(cat $HOME/.dotfiles/linux/banner)" | lolcat
 
 OS=$(printf "\033[1;31mOS:\033[0m $(lsb_release -d | cut -f2)")
 CPU=$(printf "\033[1;31mCPU:\033[0m $(cat /proc/cpuinfo | grep "model name" | uniq | cut -f2 | cut -c3-)")
