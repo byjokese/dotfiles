@@ -51,7 +51,7 @@ bash install.sh
 
 * Note: Do not run as root/sudo this file!
 
-If running the system for first time run `pre-install.sh` script before `install.sh`
+If running the system for first time run `pre-install.sh` script before `install.sh` as root user and then switch to your user for `install.sh`.
 
 ```bash
 bash pre-install.sh
