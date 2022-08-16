@@ -33,4 +33,4 @@ rm ~/.zcompdump*; compinit
 export PATH=$HOME/bin:/usr/games:/usr/local/bin:$HOME/.nvm:/usr/local/go/bin:$DENO_INSTALL/bin:$HOME/.cargo/bin:$GOPATH/bin:$HOME/.cargo/bin:$PATH
 
 # Banner
-bash $HOME/dotfiles/linux/banner.sh
+bash $HOME/.dotfiles/linux/banner.sh
