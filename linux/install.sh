@@ -1,23 +1,7 @@
 #!/bin/bash
-#exec 2> ./errors.txt
 
-# Script for prepare Debian
+# Script for installing al dev tool and languages
 # 2022 | By-Jokese (byjokese.com)
-
-export DEBIAN_FRONTEND=noninteractive
-
-sudo echo "console-setup console-setup/codeset47 select" | debconf-set-selections
-sudo echo "console-setup console-setup/codesetcode string Lat15" | debconf-set-selections
-sudo echo "console-setup console-setup/fontface47 select VGA" | debconf-set-selections
-sudo echo "console-setup console-setup/fontsize-text47 select 16" | debconf-set-selections
-sudo echo "keyboard-configuration console-setup/ask_detect boolean false" | debconf-set-selections
-sudo echo "console-setup console-setup/store_defaults_in_debconf_db boolean true" | debconf-set-selections
-sudo echo "console-setup console-setup/charmap47 select UTF-8" | debconf-set-selections
-sudo echo "console-setup console-setup/fontsize-fb47 select 16" | debconf-set-selections
-sudo echo "keyboard-configuration console-setup/detected note" | debconf-set-selections
-sudo echo "console-setup console-setup/fontsize string 16" | debconf-set-selections
-
-sudo apt-get install -y console-setup keyboard-configuration kmod
 
 # Update linux
 echo "Updating linux..."
@@ -48,7 +32,7 @@ tldr -u
 # Oh-my-zsh
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-echo source $HOME/.dotfiles/.zshrc >> ~/.zshrc
+echo source $HOME/.dotfiles/linux/.zshrc >> ~/.zshrc
 
 PATH=$HOME/bin:/usr/local/bin:$HOME/.nvm:/usr/local/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin:/usr/share/go/bin:$PNPM_HOME:$PATH
 
@@ -61,7 +45,7 @@ rm go1.18.1.linux-amd64.tar.gz
 
 # Rust install
 echo "Installing rust..."
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Deno install
 echo "Installing deno..."
