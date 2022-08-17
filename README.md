@@ -35,9 +35,9 @@ Script to prepare your GNU/Linux terminal (WSL also) in a «superterminal» with
 If you haven't a non-root user with sudo privileges, create it before run this script:
 
 ```bash
+apt-get update -y && apt-get install -y sudo git
 adduser byjokese --gecos ""
 usermod -aG sudo byjokese
-apt-get update -y && apt-get install -y sudo git
 su byjokese
 ```
 
