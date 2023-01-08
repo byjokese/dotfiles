@@ -29,9 +29,9 @@ tldr -u
 # Oh-my-zsh
 echo "Installing oh-my-zsh & powerlevel10k theme..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-cp ~/.dotfiles/linux/.zshrc >> ~/.zshrc
+cp ~/dotfiles/linux/.zshrc >> ~/.zshrc
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-cp ~/.dotfiles/linux/.p10k.zsh >> ~/.p10k.zsh
+cp ~/dotfiles/linux/.p10k.zsh >> ~/.p10k.zsh
 
 # Go install
 echo "Installing go..."
