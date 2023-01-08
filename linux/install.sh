@@ -97,7 +97,6 @@ rm -rf woff2
 
 # Change to ZSH
 echo "Changing to ZSH..."
-cp $HOME/.dotfiles/.zshrc $HOME/.zshrc
 sudo chsh -s /usr/bin/zsh
 
 zsh
