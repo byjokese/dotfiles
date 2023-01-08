@@ -34,8 +34,6 @@ cp ~/.dotfiles/linux/.zshrc >> ~/.zshrc
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 cp ~/.dotfiles/linux/.p10k.zsh >> ~/.p10k.zsh
 
-PATH=$HOME/bin:/usr/local/bin:$HOME/.nvm:/usr/local/go/bin:$HOME/.deno/bin:$HOME/.cargo/bin:/usr/share/go/bin:$PNPM_HOME:$PATH
-
 # Go install
 echo "Installing go..."
 wget --quiet https://go.dev/dl/go1.18.1.linux-amd64.tar.gz
@@ -57,8 +55,10 @@ sudo apt-get install -y python3 python3-pip python3-venv
 
 # Node/nvm install
 echo "Installing node/nvm..."
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-source $HOME/.nvm/nvm.sh
+wget --quiet -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+source ~/.zshrc
 nvm install --lts
 npm install -g svgo wipeclean ttf2woff @angular/cli
 
