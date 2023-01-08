@@ -12,15 +12,13 @@ sudo apt-get upgrade -y
 # Essentials
 echo "Installing essentials..."
 sudo apt-get install -y \
-  bash zsh zgen sudo wget git g++ make gnupg gnupg2 ca-certificates lsb-release \
+  bash zsh sudo wget git g++ make gnupg gnupg2 ca-certificates lsb-release \
   vim nano libbrotli-dev cmake \
-  jq less catimg zoxide \
-  tldr curl httpie man googler neofetch \
+  tldr curl man \
   htop ncdu icdiff \
   unzip zip bzip2 p7zip-full \
-  locales locales-all \
   bat exa \
-  sl lolcat cmatrix ffmpeg
+  lolcat ffmpeg
 
 # Fix batcat -> bat
 echo "Applaying some fixes..."
