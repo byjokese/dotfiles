@@ -20,9 +20,8 @@ sudo apt-get install -y \
   bat exa \
   lolcat ffmpeg
 
-# Fix batcat -> bat
-echo "Applaying some fixes..."
-sudo ln -s /usr/bin/batcat /usr/local/bin/bat
+# Default Shell
+sudo chsh -s $(which zsh)
 
 # TLDR update
 tldr -u
@@ -94,9 +93,3 @@ sudo cp woff2_* /usr/local/bin/
 cd ..
 cd ..
 rm -rf woff2
-
-# Change to ZSH
-echo "Changing to ZSH..."
-sudo chsh -s /usr/bin/zsh
-
-zsh
