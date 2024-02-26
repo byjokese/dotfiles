@@ -123,7 +123,7 @@
     {
       "prefix": "[MASKED]",
       "url": "[MASKED]"
-    },
+    }
   ],
   "gitlens.fileAnnotations.command": "blame",
   "grunt.autoDetect": "on",
@@ -132,8 +132,10 @@
   "javascript.preferences.quoteStyle": "single",
   "javascript.referencesCodeLens.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "jest.testExplorer": {
-    "enabled": true
+  "jest.runMode": {
+    "testFileOnly": true,
+    "type": "on-save",
+    "coverage": true
   },
   "liveServer.settings.donotShowInfoMsg": true,
   "markdown.preview.scrollEditorWithPreview": false,
@@ -162,7 +164,6 @@
   "svelte.plugin.svelte.defaultScriptLanguage": "ts",
   "terminal.external.windowsExec": "ps",
   "terminal.integrated.enableBell": true,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font, monospace",
   "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
   "terminal.integrated.shellIntegration.enabled": true,
