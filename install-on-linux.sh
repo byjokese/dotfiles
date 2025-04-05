@@ -25,6 +25,11 @@ echo -e "\n\e[1;36m=== STEP: Removing ~/.bashrc and switching default shell to Z
 chsh -s /usr/bin/zsh
 rm -f ~/.bashrc ~/.bash_profile ~/.bash_login ~/.profile ~/.bash_logout ~/bash_history
 
+echo -e "\n\e[1;35m=== STEP: Setup profile and config files ===\e[0m"
+cp -rf $SCRIPT_DIR/.config ~/.config
+cp -rf $SCRIPT_DIR/.zshrc ~/.zshrc
+tmux source-file ~/.config/.tmux.conf
+
 echo -e "\n\e[1;36m=== STEP: Installing Fastfetch from PPA ===\e[0m"
 sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 sudo apt update
@@ -113,11 +118,6 @@ echo -e "\n\e[1;33m=== STEP: Installing Development languages ===\e[0m"
 echo -e "\n\e[1;33m=== STEP: Installing Rust ===\e[0m"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-echo -e "\n\e[1;35m=== STEP: Setup profile and config files ===\e[0m"
-cp -rf $SCRIPT_DIR/.config ~/.config
-cp -rf $SCRIPT_DIR/.zshrc ~/.zshrc
-rm -f ~/.bashrc ~/.bash_profile ~/.bash_login ~/.profile ~/.bash_logout ~/bash_history
-tmux source-file ~/.config/tmux.conf
-exec zsh
-
 echo -e "\n\e[1;32m=== All steps completed successfully! Please restart your terminal. ===\e[0m"
+
+exec zsh
