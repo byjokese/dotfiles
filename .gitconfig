@@ -1,9 +1,7 @@
 [core]
-	editor = "code --waitgit rebase"
 	longpaths = true
 	untrackedCache = true
 	autocrlf = true
-	fsmonitor = true
 [user]
 	email = #replace email
 	name = Ivan Exposito

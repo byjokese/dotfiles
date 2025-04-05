@@ -1,15 +1,41 @@
-# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 # Don't print a new line at the start of the prompt
 add_newline = false
 
 # Use custom format
 format = """
-$username in $directory$package$nodejs$dotnet$java$python$git_branch$fill$battery$memory_usage$cmd_duration
+$os $username in $directory$package$nodejs$dotnet$java$python$git_branch$fill$battery$memory_usage$cmd_duration
 $status$character """
 
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
+
+# OS settings
+[os]
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
 
 # Username settings
 [username]
@@ -44,9 +70,6 @@ format = "is [🎁 $version](208 bold) "
 [nodejs]
 symbol= " "
 
-[dotnet]
-detect_extensions=[ "csproj", "fsproj", "xproj", "sln" ]
-
 # Java settings
 [java]
 symbol = "☕ "
@@ -62,7 +85,7 @@ pyenv_version_name = true
 
 # git settings
 [git_branch]
-symbol = " "
+symbol = ""
 #truncation_length = 4
 truncation_symbol = ""
 
@@ -97,6 +120,7 @@ disabled=false
 format = "$symbol"
 success_symbol = "[❯](bold yellow)"
 error_symbol = "[✗](bold red) "
+vicmd_symbol = "[❮](bold green)"
 disabled = false
 
 [status]
@@ -104,3 +128,4 @@ disabled = false
 style = "red"
 symbol = "\\(╯°□°）╯︵ ┻━┻ "
 format = "[$symbol](bg:$style) "
+
