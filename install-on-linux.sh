@@ -73,7 +73,6 @@ cd patched-fonts/FiraCode/
 find . -name "*.ttf" -exec cp {} ~/.local/share/fonts/ \;
 
 echo -e "\n\e[1;36m=== STEP: Cloning (or updating) FZF ===\e[0m"
-cd /tmp
 if [ ! -d ~/.fzf ]; then
   # Full clone of FZF
   git clone https://github.com/junegunn/fzf.git ~/.fzf
@@ -81,7 +80,7 @@ else
   cd ~/.fzf
   git pull
 fi
-~/.fzf/install --all --no-bash
+~/.fzf/install --all --no-bash --no-zsh
 
 echo -e "\n\e[1;36m=== STEP: Cloning (or updating) and building Neovim from source ===\e[0m"
 cd /tmp
@@ -117,7 +116,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 echo -e "\n\e[1;35m=== STEP: Setup profile and config files ===\e[0m"
 cp -rf $SCRIPT_DIR/.config ~/.config
 cp -rf $SCRIPT_DIR/.zshrc ~/.zshrc
-source ~/.zshrc
 rm -f ~/.bashrc ~/.bash_profile ~/.bash_login ~/.profile ~/.bash_logout ~/bash_history
+tmux source-file ~/.config/tmux.conf
+exec zsh
 
 echo -e "\n\e[1;32m=== All steps completed successfully! Please restart your terminal. ===\e[0m"

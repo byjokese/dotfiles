@@ -18,47 +18,33 @@ MacOS script in development.
    - **git** (via the official Git PPA)
    - **eza**, **bat**, **tmux**, **tldr**, **btop**, **nmap**, **ripgrep**, **ncdu**, **jq**
    - Basic compilers/build tools: `build-essential`, `cmake`, `ninja-build`, `autoconf`, `automake`, `pkg-config`, etc.
-
 2. **Zsh Setup**
    - Removes old Bash files (`.bashrc`, `.bash_profile`, etc.)
    - Sets **Zsh** as the default login shell.
-
 3. **Fastfetch**
    - A command-line tool to quickly display system info (OS, hardware, etc.).
-
 4. **zoxide**
    - A smarter `cd` command for fast directory navigation.
-
 5. **Starship**
    - A minimal, blazing-fast shell prompt.
-
 6. **fnm (Fast Node Manager)**
    - A lightweight Node.js version manager.
-
 7. **Lazydocker**
    - A simple terminal UI for Docker and docker-compose.
-
 8. **Glow**
    - A terminal-based Markdown reader (installed from Charm’s apt repo).
-
-9. **Latest Lazygit**
+9. **Lazygit**
    - A simple terminal UI for Git, installed from GitHub releases.
-
 10. **FiraCode Nerd Fonts**
     - Popular programming fonts with icons, copied into `~/.local/share/fonts`.
-
 11. **FZF**
     - A command-line fuzzy finder, installed in **unattended** mode.
-
 12. **Neovim** (from source)
     - Latest stable Neovim built from the official GitHub source.
-
 13. **Docker**
     - Docker Engine (`docker-ce`), CLI (`docker-ce-cli`), containerd, Buildx plugin, and Compose plugin, from the official Docker repository.
-
 14. **Rust**
     - Installed via the official Rustup script in non-interactive mode (`-y`).
-
 15. **Custom Config & Dotfiles**
     - Copies `.config` files from this repo into your `~/.config`.
     - Replaces `~/.zshrc` with one from the script and sources it immediately.
