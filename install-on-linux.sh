@@ -24,7 +24,6 @@ ln -s /usr/bin/batcat ~/.local/bin/bat
 echo -e "\n\e[1;36m=== STEP: Removing ~/.bashrc and switching default shell to Zsh ===\e[0m"
 chsh -s /usr/bin/zsh
 rm -f ~/.bashrc ~/.bash_profile ~/.bash_login ~/.profile ~/.bash_logout ~/bash_history
-exec zsh
 
 echo -e "\n\e[1;36m=== STEP: Installing Fastfetch from PPA ===\e[0m"
 sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
