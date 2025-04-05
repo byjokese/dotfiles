@@ -65,6 +65,7 @@ MacOS script in development.
 
 ```bash
    git clone https://github.com/byjokese/dotfiles ~/.dotfiles
+   cd ~/.dotfiles
    chmod +x install-on-linux.sh
    ./install-on-linux.sh
 ```

@@ -28,6 +28,7 @@ rm -f ~/.bashrc ~/.bash_profile ~/.bash_login ~/.profile ~/.bash_logout ~/bash_h
 echo -e "\n\e[1;35m=== STEP: Setup profile and config files ===\e[0m"
 cp -rf $SCRIPT_DIR/.config ~/.config
 cp -rf $SCRIPT_DIR/.zshrc ~/.zshrc
+source ~/.zshrc
 tmux source-file ~/.config/.tmux.conf
 
 echo -e "\n\e[1;36m=== STEP: Installing Fastfetch from PPA ===\e[0m"
