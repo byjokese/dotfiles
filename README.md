@@ -1,6 +1,6 @@
 # By-Jokese's dotfiles
 
-Script to prepare your GNU/Linux terminal (WSL also) in a «superterminal» with modern, autocompleted commands and other features.
+Script to prepare your GNU/Linux terminal (WSL compatible) in a «superterminal» with modern, autocompleted commands and other features.
 
 MacOS script in development.
 
